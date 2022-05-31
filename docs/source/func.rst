@@ -7,8 +7,8 @@ start.py
 .. automodule:: start
 	:members:
 	
-bot_setup.py
-~~~~~~~~~
+bot_token.py
+~~~~~~~~~~~~~
 
-.. automodule:: bot_setup
+.. automodule:: bot_token
 	:members:
