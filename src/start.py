@@ -1,13 +1,13 @@
 """Основной скрипт для работы бота"""
 import telebot
+from bot_token import TOKEN
 
-token = '5234059386:AAFWTu3CFmu_HjAx1yTq0qGxlhQHe2EqEyA'
-bot = telebot.TeleBot(token)
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
         """
-        Вывод на экран начального меню бота
+        Вывод на экран начального меню бота.
 
         Выводится приветствие из /data/start.txt
         и отображаются 5 кнопок для взаимодействия с ботом.
@@ -22,13 +22,53 @@ def start(message):
         health_button = markup.add(telebot.types.InlineKeyboardButton(text='Медицинская помощь', callback_data=4))
         bot.send_message(message.chat.id, text=start, reply_markup=markup)
         
-@bot.message_handler(content_types=['text'])
-def handle_text(message):
+@bot.message_handler(commands=['info'])
+def info(message):
         """
-        Отправляет введенное сообщение (тестовая функция, будет удалена)
+        Ввывод общей информации о вирусе и эпидемии.
+        
+        Выводится из /data/info.txt
+        
+        """
+        with open('../data/info.txt', encoding="utf-8") as f:
+                info = f.read()
+        bot.send_message(message.chat.id, text=info)
 
+@bot.message_handler(commands=['stats'])
+def stats(message):
+        bot.send_message(message.chat.id, "hi")
+
+
+@bot.message_handler(commands=['tourism'])
+def tourism(message):
+        pass
+
+
+@bot.message_handler(commands=['health'])
+def health(message):
+        pass
+
+
+@bot.callback_query_handler(func=lambda call: True)
+def query_handler(call):
         """
-        bot.send_message(message.chat.id, 'Message received: ' + message.text)
+        Обработчик меню.
+
+        Получает callback_data из нажатой кнопки
+        и выполняет соответствующее кнопки действие.
+        
+        """
+
+        bot.answer_callback_query(callback_query_id=call.id)
+        
+        if call.data == '1':
+                info(call.message)
+        elif call.data == '2':
+                stats(call.message)
+        elif call.data == '3':
+                tourism(call.message)
+        elif call.data == '4':
+                health(call.message)
 
 if __name__ == '__main__':
         bot.infinity_polling()
