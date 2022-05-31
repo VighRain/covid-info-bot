@@ -36,16 +36,31 @@ def info(message):
 
 @bot.message_handler(commands=['stats'])
 def stats(message):
+        """
+        Показ статистики по выбранной стране.
+
+        """
         bot.send_message(message.chat.id, "hi")
 
 
 @bot.message_handler(commands=['tourism'])
 def tourism(message):
+        """
+        Показ ограничений на перемещение
+        в выбранной стране
+
+        """
         pass
 
 
 @bot.message_handler(commands=['health'])
 def health(message):
+        """
+        Показ номеров горячих линий
+        или учереждение здравоохранения
+        в выбранной стране
+
+        """
         pass
 
 
