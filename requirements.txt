@@ -1,2 +1,1 @@
 pyTelegramBotAPI==4.4.0
-Sphinx==4.5.0
