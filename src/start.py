@@ -47,9 +47,9 @@ def stats(message):
         """
 
         sent_msg = bot.send_message(message.chat.id, "Which country to view?")
-        bot.register_next_step_handler(sent_msg, country_handler)
+        bot.register_next_step_handler(sent_msg, stats_handler)
 
-def country_stats)handler(message):
+def stats_handler(message):
         
         country = message.text
 
@@ -62,43 +62,31 @@ def country_stats)handler(message):
         print(date)
         print(country)
         
-        for row in sheet.iter_rows(min_col=2, min_row=2):
-                if row[1].value == country:
-                        if row[2].value == date:
-                                print(f"Total cases today: {row[3].value}")
-                                bot.send_message(message.chat.id, f"Total cases today: {row[3].value}")
-                        else:
-                                print("n/a")
-                                break
+        for row in sheet.iter_rows(min_col=3, max_col=6, min_row=2):
+                if row[0].value == country:
+                        if row[1].value == date:
+                                stats = "Cases yesterday: " + str(row[3].value) + "\n" + "Total cases: " + str(row[2].value)
+                                bot.send_message(message.chat.id, text=stats)
 
 
 @bot.message_handler(commands=['health'])
 def health(message):
 
-        sent_msg = bot.send_message(message.chat.id, "Where are you right now?")
-        bot.register_next_step_handler(sent_msg, country_handler)
+        sent_msg = bot.send_message(message.chat.id, "Which country to view?")
+        bot.register_next_step_handler(sent_msg, health_handler)
 
-def country_stats_handler(message):
+def health_handler(message):
         
         country = message.text
 
-        covid_set = '../data/owid-covid-data.xlsx'
-        covid_book = load_workbook(covid_set, read_only=True)
-        sheet = covid_book.active
+        health_set = '../data/health-services.xlsx'
+        health_book = load_workbook(health_set, read_only=True)
+        sheet = health_book.active
         
-        date = datetime.now()-timedelta(days=1)
-        date = date.strftime("%Y-%m-%d")
-        print(date)
-        print(country)
-        
-        for row in sheet.iter_rows(min_col=2, min_row=2):
-                if row[1].value == country:
-                        if row[2].value == date:
-                                print(f"Total cases today: {row[3].value}")
-                                bot.send_message(message.chat.id, f"Total cases today: {row[3].value}")
-                        else:
-                                print("n/a")
-                                break
+        for row in sheet.iter_rows(min_col=1, min_row=1):
+                if row[0].value == country:
+                        health = row[1].value + "\n" + row[2].value
+                        bot.send_message(message.chat.id, text=health)
 
 @bot.callback_query_handler(func=lambda call: True)
 def query_handler(call):
