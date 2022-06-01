@@ -27,7 +27,7 @@ def start(message):
 @bot.message_handler(commands=['info'])
 def info(message):
         """
-        Ввывод общей информации о вирусе и эпидемии.
+        Вывод общей информации о вирусе и эпидемии.
         
         Выводится из /data/info.txt
         
