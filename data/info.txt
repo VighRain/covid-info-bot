@@ -1,1 +1,35 @@
-Проверка инфо
+(РУС)
+Коронавирусная инфекция (COVID-19) – инфекционное заболевание, вызываемое вирусом SARS-CoV-2. 
+
+Большинство людей, инфицированных вирусом, испытывают легкие и умеренные симптомы респираторного заболевания и выздоравливают без необходимости специального лечения.
+При этом у некоторых людей оно протекает в тяжелой форме, требующей медицинского вмешательства. Тяжелая форма заболевания чаще развивается у пожилых людей и лиц с фоновыми патологиями,
+в частности сердечно-сосудистыми, хроническими респираторными, онкологическими заболеваниями и диабетом.
+Риск заражения COVID-19, тяжелого течения болезни или смерти от нее угрожает любому человеку независимо от возраста. 
+
+Наилучшим способом предупреждения и замедления передачи вируса является информирование людей о болезни и механизмах распространения ее возбудителя.
+Для защиты себя и других людей от заражения следует держаться на расстоянии не менее 1 м от окружающих, носить плотно прилегающую маску и часто мыть руки или обрабатывать их спиртосодержащим антисептиком.
+Сделайте прививку, как только наступит ваша очередь, и следуйте указаниям местных органов власти. 
+
+Источником распространения вируса может стать рот или нос зараженного человека, откуда вирус выбрасывается с мельчайшими частицами жидкости во время кашля, чихания, разговора, пения или дыхания.
+Размер этих частиц варьируется от более крупных респираторных капель до более мелкой аэрозольной пыли. Важно соблюдать респираторный этикет,
+в частности прикрывать рот сгибом локтя при кашле, а при плохом самочувствии оставаться дома и изолироваться от окружающих до момента выздоровления.
+-----------------
+Источник: ВОЗ (https://www.who.int/ru/health-topics/coronavirus#tab=tab_1)
+
+(ENG)
+Coronavirus disease (COVID-19) is an infectious disease caused by the SARS-CoV-2 virus.
+
+Most people infected with the virus will experience mild to moderate respiratory illness and recover without requiring special treatment.
+However, some will become seriously ill and require medical attention. Older people and those with underlying medical conditions
+like cardiovascular disease, diabetes, chronic respiratory disease, or cancer are more likely to develop serious illness.
+Anyone can get sick with COVID-19 and become seriously ill or die at any age. 
+
+The best way to prevent and slow down transmission is to be well informed about the disease and how the virus spreads.
+Protect yourself and others from infection by staying at least 1 metre apart from others, wearing a properly fitted mask, and washing your hands or using an alcohol-based rub frequently.
+Get vaccinated when it’s your turn and follow local guidance.
+
+The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe.
+These particles range from larger respiratory droplets to smaller aerosols. It is important to practice respiratory etiquette,
+for example by coughing into a flexed elbow, and to stay home and self-isolate until you recover if you feel unwell.
+-----------------
+Source: WHO (https://www.who.int/health-topics/coronavirus#tab=tab_1)
