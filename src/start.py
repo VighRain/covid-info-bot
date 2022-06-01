@@ -85,5 +85,10 @@ def query_handler(call):
         elif call.data == '4':
                 health(call.message)
 
+def webhook():
+    bot.remove_webhook()
+    bot.set_webhook(url='https://covid-info-bot-tele.herokuapp.com/' + TOKEN)
+    return "!", 200
+
 if __name__ == '__main__':
         bot.infinity_polling()
