@@ -60,8 +60,6 @@ def stats_handler(message):
         
         date = datetime.now()-timedelta(days=1)
         date = date.strftime("%Y-%m-%d")
-        print(date)
-        print(country)
         
         for row in sheet.iter_rows(min_col=3, max_col=6, min_row=2):
                 if row[0].value == country:
